@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Contact from './Contact';
 
 class ContactsList extends Component {
@@ -27,12 +27,13 @@ class ContactsList extends Component {
 
 	render() {
 
-		return(
+		return (
 			<div className='contact-box'>
-				<input type='text' className='search' placeholder='Search' onChange={this.handleChange} />
-				<ul className='contact'>{this.state.displayedContacts.map(function(el){
-					return(
-						<Contact key={el.id} name={el.name} phoneNumber={el.phoneNumber} image={el.image} about={el.about}/>
+				<input type='text' className='search' placeholder='Search' onChange={this.handleChange}/>
+				<ul className='contact'>{this.state.displayedContacts.map(function(el) {
+					return (
+						<Contact key={el.id} name={el.name} phoneNumber={el.phoneNumber} image={el.image}
+								about={el.about}/>
 					);
 				})}</ul>
 			</div>
